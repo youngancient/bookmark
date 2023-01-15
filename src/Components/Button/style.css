@@ -1,0 +1,64 @@
+
+
+button{
+    outline: 0;
+    border: 0;
+    height: 45px;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow:  0 4px 2px -2px hsl(229, 8%, 60%);
+}
+
+.login{
+    width: 120px;
+    background: hsl(0, 94%, 66%);
+}
+.login:hover{
+    border: 3px solid hsl(0, 94%, 66%);
+    background: #fff;
+    color: hsl(0, 94%, 66%);
+}
+.mid{
+    width: 140px;
+    background: hsl(231, 69%, 60%);
+    height: 50px;
+    font-size: 12px;
+}
+.mid:hover{
+    border: 2px solid hsl(231, 69%, 60%);
+    color: hsl(231, 69%, 60%);
+    background: transparent;
+}
+.lite{
+    background: hsl(220, 16%, 96%);
+    color: hsl(229, 31%, 21%);
+}
+.lite:hover{
+    border: 2px solid hsl(229, 31%, 21%);
+    color: hsl(229, 31%, 21%);
+    background: transparent;
+}
+
+@media screen and (min-width: 728px) {
+    .mobile{
+      display: none;
+    }
+    .desktop{
+      display: block;
+    }
+    .mid{
+        width: 150px;
+        height: 50px;
+        font-size: 13px;
+    }
+  }
+  @media screen and (min-width: 998px) {
+    .mid{
+        width: 160px;
+        height: 50px;
+        font-size: 14px;
+    }
+  }

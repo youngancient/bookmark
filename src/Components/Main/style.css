@@ -1,0 +1,189 @@
+
+
+.hero-img img{
+    width: 100%;
+}
+.text h1{
+    color: hsl(229, 31%, 21%);
+}
+.hero{
+    padding: 1rem;
+}
+.hero-text{
+    padding: 1.5rem;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.text h1{
+    text-align: center;
+    font-size: 1.8rem;
+}
+.text p{
+    text-align: center;
+    line-height: 1.5rem;
+    color: hsl(229, 8%, 60%);
+    margin-top: 1.5rem;
+}
+.hero-btn{
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.features{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.fp{
+    text-align: center;
+    line-height: 1.5rem;
+    color: hsl(229, 8%, 60%);
+    margin-top: 1.5rem;
+    font-size: 1rem;
+}
+.switch{
+    display: flex;
+    width: 100%;
+    margin-top: 2rem;
+    /* border-bottom: 1px solid hsla(229, 8%, 60%,0.6); */
+    flex-direction: column;
+}
+.switch button{
+    background: transparent;
+    color: hsl(229, 8%, 60%);
+    box-shadow: none;
+    font-size: 1rem;
+    letter-spacing: 0;
+    border-radius: 0;
+}
+.switch button:hover{
+    color: hsl(0, 94%, 66%);
+}
+.switch div{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid hsla(229, 8%, 60%,0.6);
+}
+.switch button:hover{
+    border-bottom: 3px solid hsl(0, 94%, 66%);
+}
+.switch-comp{
+    margin-top: 2rem;
+}
+@media screen and (min-width: 728px) {
+    .mobile{
+      display: none;
+    }
+    .desktop{
+      display: block;
+    }
+    .hero-img{
+        grid-area: img;
+    }
+    .hero-text{
+        grid-area: text;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+    .hero{
+        display: grid;
+        grid-template-areas: 'text img';
+        grid-template-columns: 1fr 1fr;
+        padding: 2rem;
+        padding-left: 3rem;
+    }
+    .text{
+        display: block;
+    }
+    .text h1{
+        font-size: 2rem;
+        text-align: left;
+    }
+    .text p{
+        font-size: 1rem;
+        text-align: left;
+        width: 90%;
+        line-height: 1.5rem;
+        color: hsl(229, 8%, 60%);
+        margin-top: 1.5rem;
+    }
+    .hero-btn{
+        margin-top: 1.5rem;
+        display: flex;
+        justify-content: unset;
+    }
+    .btn2{
+        margin-left: 1.5rem;
+    }
+    .features{
+        margin-top: 3rem;
+    }
+    .fp{
+        width: 60%;
+        line-height: 1.5rem;
+        color: hsl(229, 8%, 60%);
+        margin-top: 1.5rem;
+        font-size: 1rem;
+    }
+    .switch{
+        display: flex;
+        width: 70%;
+        margin-top: 2rem;
+        border-bottom: 1px solid hsla(229, 8%, 60%,0.6);
+        flex-direction: row;
+    }
+    .switch div{
+        /* margin-left: 4rem; */
+        width: 100%;
+        padding-bottom: 0.6rem;
+        display: flex;
+        justify-content: center;
+        border-bottom: none;
+        align-items: center;
+    }
+    .switch div:hover{
+        border-bottom: 3px solid hsl(0, 94%, 66%);
+    }
+    .active {
+        border-bottom: 3px solid hsl(0, 94%, 66%);
+      }
+    .switch button:hover{
+        border-bottom: none;
+    }
+  }
+  @media screen and (min-width: 998px) {
+    .hero{
+        padding: 3rem;
+        padding-left: 7.5rem;
+    }
+    .text h1{
+        font-size: 3rem;
+        width: 70%;
+    }
+    .text p{
+        font-size: 1rem;
+        line-height: 2rem;
+        width: 65%;
+    }
+    .fp{
+        width: 40%;
+    }
+    .switch{
+        display: flex;
+        width: 60%;
+        margin-top: 4rem;
+    }
+    .features{
+        margin-top: 5rem;
+    }
+  }
