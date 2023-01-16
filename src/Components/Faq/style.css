@@ -1,0 +1,49 @@
+.component {
+  border-bottom: 1px solid hsla(229, 8%, 60%, 0.6);
+  border-top: 1px solid hsla(229, 8%, 60%, 0.6);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.content {
+  line-height: 1.5rem;
+  color: hsl(229, 8%, 60%);
+  margin-top: 1.5rem;
+}
+.label{
+    font-size: 1rem;
+    cursor: pointer;
+}
+.label:hover{
+    color: hsl(0, 94%, 66%);
+}
+.faq-comp{
+    padding: 1.5rem;
+}
+.b{
+    border-top: none;
+}
+@media screen and (min-width: 728px) {
+    .b{
+        border-top: 1px solid hsla(229, 8%, 60%, 0.6);
+    }
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: block;
+  }
+  .label{
+    font-size: 1.2rem;
+}
+.component{
+    width: 70%;
+}
+.faq-comp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+}
+@media screen and (min-width: 998px) {
+}

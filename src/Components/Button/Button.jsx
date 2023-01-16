@@ -22,9 +22,9 @@ export const LiteButton = (props) => {
 }
 
 
-export const LongButton = (props) => {
+export const LongButton = () => {
     return ( 
-        <button className="long">{props.name}</button>
+        <button className="long">Add & Install Extension</button>
      );
 }
  

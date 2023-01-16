@@ -40,7 +40,7 @@ p{
     justify-content: space-between;
     width: 100%;
 }
-.features, .downloads{
+.features, .downloads, .faq{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,8 +85,27 @@ p{
 .switch-comp{
     margin-top: 2rem;
 }
+.downloads{
+    padding: 1rem;
+}
 .download{
-    /* margin-top: 2rem; */
+    width: 100%;
+}
+.add-comp{
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.download{
+    margin-top: 2rem;
+}
+.browser{
+    margin-top: 2rem;
+}
+.add-comp>:first-child{
+    margin-top: 0;
+}
+.faq-comp{
+    margin-top: 2rem;
 }
 @media screen and (max-width: 280px) {
     .hero-btn{
@@ -131,6 +150,7 @@ p{
     }
     h2{
         font-size: 1.8rem;
+        text-align: left;
     }
     .text p{
         text-align: left;
@@ -181,6 +201,31 @@ p{
     .switch button:hover{
         border-bottom: none;
     }
+    .downloads{
+        padding: 0;
+    }
+    .download{
+        margin-top: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .add-comp{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .browser{
+        margin-top: 0rem;
+    }
+    .faq{
+        margin-top: 5rem;
+    }
+    .faq-comp{
+        margin-top: 2rem;
+    }
   }
   @media screen and (min-width: 998px) {
     .hero{
@@ -212,5 +257,11 @@ p{
     }
     .downloads{
         margin-top: 8rem;
+    }
+    .download{
+        margin-top: 3rem;
+    }
+    .add-comp{
+        padding: 0;
     }
   }

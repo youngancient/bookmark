@@ -31,7 +31,10 @@ button{
     width: 120px;
     background: hsl(231, 69%, 60%);
 }
-.mid:hover, .short:hover{
+.long{
+    background: hsl(231, 69%, 60%);
+}
+.mid:hover, .short:hover, .long:hover{
     border: 2px solid hsl(231, 69%, 60%);
     color: hsl(231, 69%, 60%);
     background: transparent;

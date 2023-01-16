@@ -1,0 +1,76 @@
+
+.dots{
+    width: 100%;
+}
+.browser{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 4px 2px 0.5px hsl(229, 8%, 60%);
+}
+.browser h3{
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+}
+.in p{
+    margin-top: 0.5rem;
+}
+.browser .in{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+}
+.browser{
+    border-radius: 8px;
+}
+.browser-btn{
+    margin-top: 1rem;
+    padding: 1rem;
+    padding-top: 0;
+    padding-bottom: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dots{
+    margin-top: 1rem;
+}
+.browser-btn button{
+    width: 100%;
+}
+@media screen and (min-width: 728px) {
+    .mobile{
+      display: none;
+    }
+    .desktop{
+      display: block;
+    }
+    .browser h3{
+        margin-top: 2rem;
+    }
+    .in{
+        padding: 3rem;
+    }
+    .in p{
+        margin-top: 0.5rem;
+    }
+    .dots{
+        margin-top: 1rem;
+    }
+  }
+  @media screen and (min-width: 998px) {
+    .in{
+        margin-top: 0.5rem;
+    }
+    .browser-btn{
+        margin-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    .dots{
+        margin-top: 2rem;
+    }
+  }

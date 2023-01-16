@@ -1,13 +1,20 @@
 import "./style.css";
+import { LongButton } from "../Button/Button";
 
+const Add = ({alt, imgSrc, head, text}) => {
+  return (
+    <div className="browser">
+      <div className="in">
+        <img src={imgSrc} alt={alt} className="" />
+        <h3>{head}</h3>
+        <p>{ text }</p>
+      </div>
+      <img src="/assets/bg-dots.svg" alt="dots" className="dots" />
+      <div className="browser-btn">
+        <LongButton />
+      </div>
+    </div>
+  );
+};
 
-
-const Add = () => {
-    return ( 
-        <div className="browser">
-            
-        </div>
-     );
-}
- 
 export default Add;
