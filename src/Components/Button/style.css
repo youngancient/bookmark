@@ -27,7 +27,11 @@ button{
     height: 50px;
     font-size: 12px;
 }
-.mid:hover{
+.short{
+    width: 120px;
+    background: hsl(231, 69%, 60%);
+}
+.mid:hover, .short:hover{
     border: 2px solid hsl(231, 69%, 60%);
     color: hsl(231, 69%, 60%);
     background: transparent;

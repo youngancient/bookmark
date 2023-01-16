@@ -1,0 +1,93 @@
+.comp-img img {
+  width: 100%;
+}
+h3 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.comp p {
+  line-height: 1.5rem;
+  color: hsl(229, 8%, 60%);
+  margin-top: 1.5rem;
+  text-align: center;
+}
+.comp-btn {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.comp {
+  padding: 2rem;
+}
+.innertxt{
+    margin-top: 2rem;
+  }
+.comp-img img{
+    box-shadow:  0 4px 2px 0.5px hsl(231, 69%, 60%);
+}
+@media screen and (min-width: 728px) {
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: block;
+  }
+  .comp {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    padding: 2rem;
+  }
+  .comp-img img {
+    margin-left: auto;
+    margin-right: 0;
+  }
+  h3 {
+    text-align: left;
+  }
+  .innertxt{
+    margin-top: 0;
+  }
+  .comp-text {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2.5rem;
+  }
+  .comp p{
+    text-align: left;
+  }
+  .comp p,
+  .comp-btn {
+    margin-top: 1rem;
+  }
+  .comp-btn{
+    display: block;
+  }
+}
+@media screen and (min-width: 998px) {
+  .comp {
+    grid-gap: 2rem;
+  }
+  .comp-img img {
+    width: auto;
+  }
+  .comp-img {
+    display: flex;
+  }
+  h3 {
+    font-size: 1.8rem;
+  }
+  .comp p,
+  .comp-btn {
+    margin-top: 2rem;
+  }
+  .comp p {
+    width: 70%;
+  }
+  .comp-text{
+    padding-left: 4rem;
+  }
+}

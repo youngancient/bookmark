@@ -3,7 +3,7 @@
 .hero-img img{
     width: 100%;
 }
-.text h1{
+h1, h2,h3{
     color: hsl(229, 31%, 21%);
 }
 .hero{
@@ -22,10 +22,16 @@
     text-align: center;
     font-size: 1.8rem;
 }
-.text p{
-    text-align: center;
+h2{
+    font-size: 1.6rem;
+}
+p{
     line-height: 1.5rem;
     color: hsl(229, 8%, 60%);
+    font-size: 1rem;
+}
+.text p{
+    text-align: center;
     margin-top: 1.5rem;
 }
 .hero-btn{
@@ -34,11 +40,12 @@
     justify-content: space-between;
     width: 100%;
 }
-.features{
+.features, .downloads{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 3rem;
 }
 .fp{
     text-align: center;
@@ -78,6 +85,19 @@
 .switch-comp{
     margin-top: 2rem;
 }
+.download{
+    /* margin-top: 2rem; */
+}
+@media screen and (max-width: 280px) {
+    .hero-btn{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .btn2{
+        margin-top: 1rem;
+    }
+}
 @media screen and (min-width: 728px) {
     .mobile{
       display: none;
@@ -109,36 +129,37 @@
         font-size: 2rem;
         text-align: left;
     }
+    h2{
+        font-size: 1.8rem;
+    }
     .text p{
-        font-size: 1rem;
         text-align: left;
         width: 90%;
-        line-height: 1.5rem;
-        color: hsl(229, 8%, 60%);
         margin-top: 1.5rem;
     }
     .hero-btn{
         margin-top: 1.5rem;
         display: flex;
         justify-content: unset;
+        flex-direction: row;
     }
     .btn2{
         margin-left: 1.5rem;
+        margin-top: 0;
     }
-    .features{
+    .features, .downloads{
         margin-top: 3rem;
     }
     .fp{
         width: 60%;
         line-height: 1.5rem;
         color: hsl(229, 8%, 60%);
-        margin-top: 1.5rem;
-        font-size: 1rem;
+        margin-top: 1rem;
     }
     .switch{
         display: flex;
         width: 70%;
-        margin-top: 2rem;
+        margin-top: 1.5rem;
         border-bottom: 1px solid hsla(229, 8%, 60%,0.6);
         flex-direction: row;
     }
@@ -170,9 +191,12 @@
         font-size: 3rem;
         width: 70%;
     }
+    h2{
+        font-size: 2.5rem;
+    }
     .text p{
-        font-size: 1rem;
         line-height: 2rem;
+        font-size: 1rem;
         width: 65%;
     }
     .fp{
@@ -183,7 +207,10 @@
         width: 60%;
         margin-top: 4rem;
     }
-    .features{
+    .features, .downloads{
         margin-top: 5rem;
+    }
+    .downloads{
+        margin-top: 8rem;
     }
   }
