@@ -25,7 +25,7 @@
     font-weight: 400;
     color: hsl(229, 31%, 21%);
 }
-.label:hover{
+.label h4:hover{
     color: hsl(0, 94%, 66%);
 }
 .faq-comp{

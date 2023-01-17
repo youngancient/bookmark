@@ -107,6 +107,9 @@ p{
 .add-comp>:first-child{
     margin-top: 0;
 }
+.faq{
+    padding: 1rem;
+}
 .faq-comp{
     margin-top: 2rem;
 }
@@ -124,7 +127,7 @@ p{
 .contact{
     padding: 2rem;
 }
-.contact h2{
+.contact h2, .faq h2{
     text-align: center;
 }
 form{
@@ -301,6 +304,7 @@ form svg{
     }
     .faq{
         margin-top: 10rem;
+        padding: 0;
     }
     .faq-comp{
         margin-top: 2rem;

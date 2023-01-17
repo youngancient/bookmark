@@ -4,56 +4,12 @@ import { useState, useEffect } from "react";
 import Feature from "../Features/Feature";
 import Add from "../Add/Add";
 import Faq from "../Faq/Faq";
+import { featuresData, downloadsData } from "../../Utils/Data";
 
-const features = [
-  {
-    id: 1,
-    imgSrc: "/assets/tab1.svg",
-    alt: "tab one",
-    head: "Bookmark in one click",
-    text: "Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.",
-  },
-  {
-    id: 2,
-    imgSrc: "/assets/tab2.svg",
-    alt: "tab two",
-    head: "Intelligent search",
-    text: "Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.",
-  },
-  {
-    id: 3,
-    imgSrc: "/assets/tab3.svg",
-    alt: "tab three",
-    head: "Share your bookmarks",
-    text: "Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.",
-  },
-];
-const downloads = [
-  {
-    id: 1,
-    imgSrc: "/assets/logo-chrome.svg",
-    alt: "chrome",
-    head: "Add to Chrome",
-    text: "Minimum version 62",
-  },
-  {
-    id: 2,
-    imgSrc: "/assets/logo-firefox.svg",
-    alt: "firefox",
-    head: "Add to Firefox",
-    text: "Minimum version 55",
-  },
-  {
-    id: 3,
-    imgSrc: "/assets/logo-opera.svg",
-    alt: "opera",
-    head: "Add to Opera",
-    text: "Minimum version 46",
-  },
-];
 
-let feature = {};
 const Main = () => {
+  const [features, setFeatures] = useState(featuresData);
+  const [downloads, setDownloads] = useState(downloadsData);
   const [switchNo, setSwitch] = useState(0);
   const [feature, setFeature] = useState({});
   useEffect(() => {
