@@ -25,7 +25,7 @@ const Header = ({ isClicked, setClick }) => {
               CONTACT
             </a>
             <a href="#" className="">
-              <LoginButton />
+              <LoginButton name="LOGIN" />
             </a>
           </div>
         </div>

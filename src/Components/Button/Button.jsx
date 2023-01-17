@@ -1,8 +1,8 @@
 import './style.css';
 
-export const LoginButton = () => {
+export const LoginButton = (props) => {
     return ( 
-        <button className="login">LOGIN</button>
+        <button className="login">{props.name}</button>
      );
 }
 export const ShortButton = (props) => {

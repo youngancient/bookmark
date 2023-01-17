@@ -12,6 +12,16 @@
 .label{
     font-size: 1rem;
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.label svg{
+    margin-right: 0.5rem;
+}
+.label h4{
+    font-weight: 400;
+    color: hsl(229, 31%, 21%);
 }
 .label:hover{
     color: hsl(0, 94%, 66%);
@@ -19,11 +29,24 @@
 .faq-comp{
     padding: 1.5rem;
 }
-.b{
+.faq-comp:first-child{
     border-top: none;
 }
+.content-cont{
+    height: 0;
+    overflow: hidden;
+}
+.rotate{
+    transform:rotateZ(180deg);
+}
+.info-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
 @media screen and (min-width: 728px) {
-    .b{
+    .faq-comp:first-child{
         border-top: 1px solid hsla(229, 8%, 60%, 0.6);
     }
   .mobile {
@@ -36,7 +59,7 @@
     font-size: 1.2rem;
 }
 .component{
-    width: 70%;
+    width: 65%;
 }
 .faq-comp{
     display: flex;
@@ -44,6 +67,12 @@
     justify-content: center;
     align-items: center;
 }
+.info-btn{
+    width: 100%;
+}
 }
 @media screen and (min-width: 998px) {
+    .component{
+        width: 50%;
+    }
 }

@@ -1,5 +1,5 @@
 import "./style.css";
-import { MediumButton, LiteButton } from "../Button/Button";
+import { MediumButton, LiteButton, LoginButton } from "../Button/Button";
 import { useState, useEffect } from "react";
 import Feature from "../Features/Feature";
 import Add from "../Add/Add";
@@ -149,6 +149,23 @@ const Main = () => {
             like answered please feel free to email us.
           </p>
           <Faq />
+        </div>
+        <div className="contact bdr">
+          <div className="contact-div bdr">
+            <h5>35,000+ already joined</h5>
+            <h2>Stay up-to-date with what we’re doing</h2>
+            <form className="bdr" >
+              <div className="form bdr">
+                <input type="text" name="" placeholder="Enter your email address" className="bdr"/>
+                <div className="form-btn">
+                  <LoginButton name='Contact Us' />
+                </div>
+              </div>
+              <div className="error bdr">
+                <p>Whoops make sure it's an email</p>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </main>

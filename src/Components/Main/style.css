@@ -1,5 +1,3 @@
-
-
 .hero-img img{
     width: 100%;
 }
@@ -40,7 +38,7 @@ p{
     justify-content: space-between;
     width: 100%;
 }
-.features, .downloads, .faq{
+.features, .downloads, .faq, .contact{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,6 +105,31 @@ p{
 .faq-comp{
     margin-top: 2rem;
 }
+.contact h5{
+    font-size: 1rem;
+    color: hsl(229, 31%, 21%);
+    letter-spacing: 2px;
+}
+.contact-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact{
+    padding: 2rem;
+}
+.contact h2{
+    text-align: center;
+}
+form{
+    margin-top: 2rem;
+    width: 100%;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+}
 @media screen and (max-width: 280px) {
     .hero-btn{
         flex-direction: column;
@@ -116,6 +139,12 @@ p{
     .btn2{
         margin-top: 1rem;
     }
+}
+input{
+    padding: 8px;
+    outline: 0;
+    height: 45px;
+    border: 0;
 }
 @media screen and (min-width: 728px) {
     .mobile{
@@ -226,6 +255,27 @@ p{
     .faq-comp{
         margin-top: 2rem;
     }
+    .contact{
+        padding: 2rem;
+    }
+    .contact h2{
+        margin-top: 1rem;
+        width: 80%;
+    }
+    .form{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    input{
+        width: 50%;
+    }
+    .form-btn{
+        margin-left: 1rem;
+    }
+    .error p{
+        margin-left: 15%;
+    }
   }
   @media screen and (min-width: 998px) {
     .hero{
@@ -263,5 +313,15 @@ p{
     }
     .add-comp{
         padding: 0;
+    }
+    .contact{
+        padding: 4rem;
+    }
+    .contact h2{
+        margin-top: 2rem;
+        width: 80%;
+    }
+    .error p{
+        margin-left: 18%;
     }
   }
