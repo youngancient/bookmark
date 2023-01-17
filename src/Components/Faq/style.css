@@ -8,6 +8,7 @@
   line-height: 1.5rem;
   color: hsl(229, 8%, 60%);
   margin-top: 1.5rem;
+  transition: 2s ease-in;
 }
 .label{
     font-size: 1rem;
@@ -18,6 +19,7 @@
 }
 .label svg{
     margin-right: 0.5rem;
+    transition: 1s;
 }
 .label h4{
     font-weight: 400;
@@ -35,6 +37,7 @@
 .content-cont{
     height: 0;
     overflow: hidden;
+    transition: 1s;
 }
 .rotate{
     transform:rotateZ(180deg);

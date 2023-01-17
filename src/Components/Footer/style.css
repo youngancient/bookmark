@@ -1,0 +1,40 @@
+footer {
+  background: hsl(229, 31%, 21%);
+}
+footer a,
+footer i {
+  color: #fff;
+}
+.f-social-links a {
+  font-size: 1.5rem;
+}
+.footer{
+    padding: 2rem;
+  }
+@media screen and (min-width: 728px) {
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: block;
+  }
+  .footer{
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+  }
+  .footer-img {
+    width: 20%;
+  }
+  .footer-links{
+    display: flex;
+    align-items: center;
+    width: 80%;
+  }
+}
+@media screen and (min-width: 998px) {
+    .footer{
+        padding-left: 8rem;
+        padding-right: 8rem;
+    }
+}

@@ -97,16 +97,16 @@ const Main = () => {
             can access them on the go.
           </p>
           <div className="switch">
-            <div className="tab1" style={{ marginLeft: "0px" }}>
-              <button className="" onClick={() => setSwitch(0)}>
+            <div className={`tab1 ${switchNo === 0 ? `active` : ''}`} style={{ marginLeft: "0px" }}>
+              <button className={switchNo === 0 ? `activebtn` : ''} onClick={() => setSwitch(0)}>
                 Simple Bookmarking
               </button>
             </div>
-            <div className="tab2">
-              <button onClick={() => setSwitch(1)}>Speedy Searching</button>
+            <div className={`tab2 ${switchNo === 1 ? `active` : ''}`}>
+              <button className={switchNo === 1 ? `activebtn` : ''} onClick={() => setSwitch(1)}>Speedy Searching</button>
             </div>
-            <div className="tab3">
-              <button onClick={() => setSwitch(2)}>Easy Sharing</button>
+            <div className={`tab3 ${switchNo === 2 ? `active` : ''}`}>
+              <button className={switchNo === 2 ? `activebtn` : ''} onClick={() => setSwitch(2)}>Easy Sharing</button>
             </div>
           </div>
           <div className="switch-comp">
@@ -150,19 +150,36 @@ const Main = () => {
           </p>
           <Faq />
         </div>
-        <div className="contact bdr">
-          <div className="contact-div bdr">
+        <div className="contact">
+          <div className="contact-div">
             <h5>35,000+ already joined</h5>
             <h2>Stay up-to-date with what we’re doing</h2>
-            <form className="bdr" >
-              <div className="form bdr">
-                <input type="text" name="" placeholder="Enter your email address" className="bdr"/>
+            <form className="">
+              <div className="form">
+                <input
+                  type="text"
+                  name=""
+                  placeholder="Enter your email address"
+                  className=""
+                />
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                  <g fill="none" fillRule="evenodd">
+                    <circle cx="10" cy="10" r="10" fill="#FA5959" />
+                    <g fill="#FFF" transform="translate(9 5)">
+                      <rect width="2" height="7" rx="1" />
+                      <rect width="2" height="2" y="8" rx="1" />
+                    </g>
+                  </g>
+                </svg>
+                <div className="error mobile">
+                <p className="">Whoops make sure it's an email</p>
+              </div>
                 <div className="form-btn">
-                  <LoginButton name='Contact Us' />
+                  <LoginButton name="Contact Us" />
                 </div>
               </div>
-              <div className="error bdr">
-                <p>Whoops make sure it's an email</p>
+              <div className="error desktop">
+                <p className="">Whoops make sure it's an email</p>
               </div>
             </form>
           </div>

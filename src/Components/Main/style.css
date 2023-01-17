@@ -66,6 +66,7 @@ p{
     font-size: 1rem;
     letter-spacing: 0;
     border-radius: 0;
+    width: 50%;
 }
 .switch button:hover{
     color: hsl(0, 94%, 66%);
@@ -78,6 +79,10 @@ p{
     border-bottom: 1px solid hsla(229, 8%, 60%,0.6);
 }
 .switch button:hover{
+    border-bottom: 3px solid hsl(0, 94%, 66%);
+}
+.switch div .activebtn{
+    color: hsl(0, 94%, 66%);
     border-bottom: 3px solid hsl(0, 94%, 66%);
 }
 .switch-comp{
@@ -129,6 +134,49 @@ form{
 .form{
     display: flex;
     flex-direction: column;
+    position: relative;
+}
+.contact{
+    background: hsl(231, 69%, 60%);
+}
+.contact p, .contact h2, .contact h5{
+    color: #fff;
+}
+input{
+    border-radius: 4px;
+    padding: 8px;
+    outline: 0;
+    height: 45px;
+    border: 0;
+    width: 100%;
+}
+form svg{
+    position: absolute;
+    top: 0.8rem;
+    left: 90%;
+}
+.form{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form-btn {
+    margin-top: 0.2rem;
+    width: 100%;
+}
+.form-btn button{
+    width: 100%;
+}
+.error{
+    width: 100%;
+}
+.error p{
+    padding: 4px;
+    text-align: center;
+    font-size: 13px;
+    padding-right: 4px;
+    padding-right: 4px;
+    width: 100%;
 }
 @media screen and (max-width: 280px) {
     .hero-btn{
@@ -139,12 +187,6 @@ form{
     .btn2{
         margin-top: 1rem;
     }
-}
-input{
-    padding: 8px;
-    outline: 0;
-    height: 45px;
-    border: 0;
 }
 @media screen and (min-width: 728px) {
     .mobile{
@@ -212,6 +254,7 @@ input{
         border-bottom: 1px solid hsla(229, 8%, 60%,0.6);
         flex-direction: row;
     }
+
     .switch div{
         /* margin-left: 4rem; */
         width: 100%;
@@ -224,11 +267,18 @@ input{
     .switch div:hover{
         border-bottom: 3px solid hsl(0, 94%, 66%);
     }
-    .active {
-        border-bottom: 3px solid hsl(0, 94%, 66%);
-      }
     .switch button:hover{
         border-bottom: none;
+    }
+    .switch .active{
+        border-bottom: 3px solid hsl(0, 94%, 66%);
+    }
+    .switch div .activebtn{
+        color: hsl(0, 94%, 66%);
+        border-bottom: none;
+    }
+    .switch button{
+        width: 100%;
     }
     .downloads{
         padding: 0;
@@ -250,7 +300,7 @@ input{
         margin-top: 0rem;
     }
     .faq{
-        margin-top: 5rem;
+        margin-top: 10rem;
     }
     .faq-comp{
         margin-top: 2rem;
@@ -264,17 +314,36 @@ input{
     }
     .form{
         flex-direction: row;
-        justify-content: center;
-        align-items: center;
+    }
+    .browser:nth-child(2){
+        transform: translateY(15%);
+    }
+    .browser:nth-child(3){
+        transform: translateY(30%);
     }
     input{
         width: 50%;
     }
     .form-btn{
         margin-left: 1rem;
+        width: auto;
+        margin-top: 0px;
+    }
+    .form-btn button{
+        width: 120px;
+    }
+    .error{
+        width: auto;
     }
     .error p{
         margin-left: 15%;
+        width: 45%;
+        text-align: left;
+        font-size: 13px;
+    }
+    form svg{
+        position: absolute;
+        left: 56%;
     }
   }
   @media screen and (min-width: 998px) {
@@ -321,7 +390,13 @@ input{
         margin-top: 2rem;
         width: 80%;
     }
+    .faq{
+        margin-top: 15rem;
+    }
+    form svg{
+        left: 60%;
+    }
     .error p{
-        margin-left: 18%;
+        margin-left: 17%;
     }
   }
