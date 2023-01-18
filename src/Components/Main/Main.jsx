@@ -15,6 +15,37 @@ const Main = () => {
   useEffect(() => {
     setFeature(features[switchNo]);
   }, [switchNo]);
+
+  // for the form
+  const [email, setEmail] = useState("")
+  const [errorMsg, setErrorMsg]= useState(null);
+  const [isValid, setIsValid] = useState(false);
+  const [isSubmitting, setSubmit] = useState(false);
+
+  const handleMail = (event) => {
+    setEmail(event.target.value.trim());
+    const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if (mailformat.test(email)) {
+      setErrorMsg(null);
+      setIsValid(true);
+    } else {
+      setErrorMsg("Whoops! This Email Address");
+      setIsValid(false);
+    }
+  };
+
+  const handleSubmit = (event) => {
+    if (!isValid) {
+      event.preventDefault();
+    } else {
+      setTimeout(() => {
+        setSubmit(true);
+      }, 1000);
+      // event.preventDefault();
+    }
+  };
+
+
   return (
     <main>
       <div className="main">
@@ -110,15 +141,17 @@ const Main = () => {
           <div className="contact-div">
             <h5>35,000+ already joined</h5>
             <h2>Stay up-to-date with what we’re doing</h2>
-            <form className="">
+            <form className="" onSubmit={handleSubmit}>
               <div className="form">
                 <input
                   type="text"
                   name=""
                   placeholder="Enter your email address"
-                  className=""
+                  className={isValid ? 'red' : 'green'}
+                  onChange={handleMail}
+                  onKeyUp={handleMail}
                 />
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" className={errorMsg === "Whoops! This Email Address" ? `` : 'hid'}>
                   <g fill="none" fillRule="evenodd">
                     <circle cx="10" cy="10" r="10" fill="#FA5959" />
                     <g fill="#FFF" transform="translate(9 5)">
@@ -128,14 +161,14 @@ const Main = () => {
                   </g>
                 </svg>
                 <div className="error mobile">
-                <p className="">Whoops make sure it's an email</p>
+                <p className="">{ errorMsg }</p>
               </div>
                 <div className="form-btn">
-                  <LoginButton name="Contact Us" />
+                  <LoginButton name={isSubmitting ? 'Sending': 'Contact Us'} />
                 </div>
               </div>
               <div className="error desktop">
-                <p className="">Whoops make sure it's an email</p>
+                <p className="">{ errorMsg }</p>
               </div>
             </form>
           </div>

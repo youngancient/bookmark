@@ -82,7 +82,7 @@ p{
     border-bottom: 3px solid hsl(0, 94%, 66%);
 }
 .switch div .activebtn{
-    color: hsl(0, 94%, 66%);
+    color: hsl(229, 31%, 21%);
     border-bottom: 3px solid hsl(0, 94%, 66%);
 }
 .switch-comp{
@@ -180,6 +180,16 @@ form svg{
     padding-right: 4px;
     padding-right: 4px;
     width: 100%;
+    color: hsl(0, 94%, 66%);
+}
+.red{
+    border: 3px solid hsl(0, 94%, 66%);
+}
+.red{
+    border: 3px solid cyan;
+}
+.hid{
+    visibility: hidden;
 }
 @media screen and (max-width: 280px) {
     .hero-btn{
@@ -277,7 +287,7 @@ form svg{
         border-bottom: 3px solid hsl(0, 94%, 66%);
     }
     .switch div .activebtn{
-        color: hsl(0, 94%, 66%);
+        color: hsl(229, 31%, 21%);
         border-bottom: none;
     }
     .switch button{

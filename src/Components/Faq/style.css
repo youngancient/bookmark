@@ -8,7 +8,6 @@
   line-height: 1.5rem;
   color: hsl(229, 8%, 60%);
   margin-top: 1.5rem;
-  transition: 2s ease-in;
 }
 .label{
     font-size: 1rem;
@@ -19,7 +18,10 @@
 }
 .label svg{
     margin-right: 0.5rem;
-    transition: 1s;
+    transition: 0.5s;
+}
+.label svg:hover{
+    opacity: 0.75;
 }
 .label h4{
     font-weight: 400;
@@ -48,6 +50,20 @@
     align-items: center;
     margin-top: 3rem;
 }
+.ans{
+    animation: slidein 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes slidein {
+    from {
+      opacity: 0.3;
+      transform: translateY(-20%)
+    } to {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  
 @media screen and (min-width: 728px) {
     .faq-comp:first-child{
         border-top: 1px solid hsla(229, 8%, 60%, 0.6);
