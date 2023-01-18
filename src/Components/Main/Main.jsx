@@ -9,7 +9,57 @@ import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { motion } from "framer-motion";
 
 
-
+const heroVariants = {
+  initial: {
+    opacity: 0,
+  },
+  final: {
+    opacity: 1,
+    transition: {
+      delay: 1,
+      duration: 1.5,
+      staggerChildren: 1,
+    }
+  }
+}
+const heroChildVariants = {
+  left: {
+    x: '-25%',
+  },
+  right: {
+    x: '25%',
+  },
+  final: {
+    x: 0,
+    transition: {
+      delay: 1,
+      duration: 1.5,
+      staggerChildren: 1,
+    }
+  },
+  btnLeft: {
+    x: '-100vw',
+  },
+  btnRight: {
+    x: '100vw',
+  },
+  btnFinal : {
+    x: 0,
+    transition:{
+      delay: 1,
+      duration: 2,
+    }
+  },
+  btnFinal2 : {
+    x: 0,
+    transition:{
+      delay: 2,
+      duration: 2,
+      type : 'spring',
+      stiffness : 300
+    }
+  }
+}
 
 const Main = () => {
   const [features, setFeatures] = useState(featuresData);
@@ -54,58 +104,6 @@ const Main = () => {
     words: ["Manager", "Library"],
     loop: {},
   });
-
-  const heroVariants = {
-    initial: {
-      opacity: 0,
-    },
-    final: {
-      opacity: 1,
-      transition: {
-        delay: 1,
-        duration: 1.5,
-        staggerChildren: 1,
-      }
-    }
-  }
-  const heroChildVariants = {
-    left: {
-      x: '-25%',
-    },
-    right: {
-      x: '25%',
-    },
-    final: {
-      x: 0,
-      transition: {
-        delay: 1,
-        duration: 1.5,
-        staggerChildren: 1,
-      }
-    },
-    btnLeft: {
-      x: '-100vw',
-    },
-    btnRight: {
-      x: '100vw',
-    },
-    btnFinal : {
-      x: 0,
-      transition:{
-        delay: 1,
-        duration: 2,
-      }
-    },
-    btnFinal2 : {
-      x: 0,
-      transition:{
-        delay: 2,
-        duration: 2,
-        type : 'spring',
-        stiffness : 300
-      }
-    }
-  }
 
   return (
     <main>

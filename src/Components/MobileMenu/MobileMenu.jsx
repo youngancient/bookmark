@@ -1,9 +1,48 @@
 import "./style.css";
+import { motion } from "framer-motion";
+
+
+const heroVariants = {
+  initial: {
+    opacity: 0,
+  },
+  final: {
+    opacity: 1,
+    transition: {
+      duration: 1.5,
+      staggerChildren: 1,
+    }
+  }
+}
+const slideVariants = {
+  up: {
+    y: '-100vh',
+  },
+  down: {
+    y: '100vh',
+  },
+  final: {
+    y: 0,
+    transition: {
+      delay: 0.5,
+      duration: 1,
+    }
+  },
+
+}
 
 const MobileMenu = ({setClick}) => {
   return (
-    <div className="popup bdr mobile">
-      <div className="slidein">
+    <motion.div className="popup mobile"
+    variants={heroVariants}
+    initial= 'initial'
+    animate = 'final'
+    >
+      <motion.div className="slidein"
+      variants={slideVariants}
+      initial= 'up'
+      animate = 'final'
+      >
         <div className="top">
           <img
             src="/assets/white-logo-bookmark.svg"
@@ -40,16 +79,20 @@ const MobileMenu = ({setClick}) => {
             </a>
             </div>
         </div>
-      </div>
-      <div className="mobile-socials">
+      </motion.div>
+      <motion.div className="mobile-socials"
+      variants={slideVariants}
+      initial= 'down'
+      animate = 'final'
+      >
         <a href="#" className="" style={{marginLeft: '0px'}}>
           <i className="fa-brands fa-square-facebook"></i>
         </a>
         <a href="#" className="">
           <i className="fa-brands fa-twitter"></i>
         </a>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
