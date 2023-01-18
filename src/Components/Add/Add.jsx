@@ -1,9 +1,11 @@
 import "./style.css";
 import { LongButton } from "../Button/Button";
+import { motion } from "framer-motion";
 
 const Add = ({alt, imgSrc, head, text}) => {
   return (
-    <div className="browser">
+    <div className="browser"
+    >
       <div className="in">
         <img src={imgSrc} alt={alt} className="" />
         <h3>{head}</h3>

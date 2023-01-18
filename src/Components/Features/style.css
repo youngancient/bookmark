@@ -38,6 +38,7 @@ h3 {
     grid-template-columns: 1fr 1fr;
     grid-gap: 1rem;
     padding: 2rem;
+    overflow-x: hidden;
   }
   .comp-img img {
     margin-left: auto;

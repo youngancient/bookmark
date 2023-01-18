@@ -5,6 +5,10 @@ import Feature from "../Features/Feature";
 import Add from "../Add/Add";
 import Faq from "../Faq/Faq";
 import { featuresData, downloadsData } from "../../Utils/Data";
+import { useTypewriter, Cursor } from "react-simple-typewriter";
+import { motion } from "framer-motion";
+
+
 
 
 const Main = () => {
@@ -13,7 +17,9 @@ const Main = () => {
   const [switchNo, setSwitch] = useState(0);
   const [feature, setFeature] = useState({});
   useEffect(() => {
-    setFeature(features[switchNo]);
+    setTimeout(() => {
+      setFeature(features[switchNo]);
+    }, 100);
   }, [switchNo]);
 
   // for the form
@@ -44,44 +50,129 @@ const Main = () => {
       // event.preventDefault();
     }
   };
+  const [text] = useTypewriter({
+    words: ["Manager", "Library"],
+    loop: {},
+  });
 
+  const heroVariants = {
+    initial: {
+      opacity: 0,
+    },
+    final: {
+      opacity: 1,
+      transition: {
+        delay: 1,
+        duration: 1.5,
+        staggerChildren: 1,
+      }
+    }
+  }
+  const heroChildVariants = {
+    left: {
+      x: '-25%',
+    },
+    right: {
+      x: '25%',
+    },
+    final: {
+      x: 0,
+      transition: {
+        delay: 1,
+        duration: 1.5,
+        staggerChildren: 1,
+      }
+    },
+    btnLeft: {
+      x: '-100vw',
+    },
+    btnRight: {
+      x: '100vw',
+    },
+    btnFinal : {
+      x: 0,
+      transition:{
+        delay: 1,
+        duration: 2,
+      }
+    },
+    btnFinal2 : {
+      x: 0,
+      transition:{
+        delay: 2,
+        duration: 2,
+        type : 'spring',
+        stiffness : 300
+      }
+    }
+  }
 
   return (
     <main>
       <div className="main">
-        <div className="hero">
-          <div className="hero-img">
+        <motion.div className="hero"
+        variants={heroVariants}
+        initial= 'initial'
+        animate = 'final'
+        >
+          <motion.div className="hero-img"
+          variants={heroChildVariants}
+          initial='left'
+          animate= 'final'
+          >
             <img
               src="/assets/illustration-hero.svg"
               alt="hero svg"
               className=""
             />
-          </div>
-          <div className="hero-text">
+          </motion.div>
+          <motion.div className="hero-text"
+          variants={heroChildVariants}
+          initial= 'right'
+          animate='final'
+          >
             <div className="text">
-              <h1>A Simple Bookmark Manager</h1>
+              <h1>A Simple Bookmark
+              <strong>
+                  {text}
+                  <Cursor cursorColor="hsl(0, 94%, 66%)" />
+                </strong>
+              </h1>
               <p>
                 A clean and simple interface to organize your favourite
                 websites. Open a new browser tab and see your sites load
                 instantly. Try it for free.
               </p>
               <div className="hero-btn">
-                <div className="btn1">
+                <motion.div className="btn1"
+                variants={heroChildVariants}
+                initial= 'btnLeft'
+                animate = 'btnFinal'
+                >
                   <MediumButton name="Get it on Chrome" />
-                </div>
-                <div className="btn2">
+                </motion.div>
+                <motion.div className="btn2"
+                variants={heroChildVariants}
+                initial= 'btnRight'
+                animate = 'btnFinal2'
+                >
                   <LiteButton name="Get it on Firefox" />
-                </div>
+                </motion.div>
               </div>
             </div>
-          </div>
-        </div>
-        <div className="features">
+          </motion.div>
+        </motion.div>
+        <motion.div className="features"
+        variants={heroVariants}
+        initial= 'initial'
+        animate = 'final'
+        >
           <h2>Features</h2>
           <p className="fp">
             Our aim is to make it quick and easy for you to access your
             favourite websites. Your bookmarks sync between your devices so you
-            can access them on the go.
+            can access them on
+             the go.
           </p>
           <div className="switch">
             <div className={`tab1 ${switchNo === 0 ? `active` : ''}`} style={{ marginLeft: "0px" }}>
@@ -107,8 +198,12 @@ const Main = () => {
               />
             </div>
           </div>
-        </div>
-        <div className="downloads">
+        </motion.div>
+        <motion.div className="downloads"
+        variants={heroVariants}
+        initial= 'initial'
+        animate = 'final'
+        >
           <h2>Download the extension</h2>
           <p className="fp">
             Our aim is to make it quick and easy for you to access your
@@ -128,7 +223,7 @@ const Main = () => {
               ))}
             </div>
           </div>
-        </div>
+        </motion.div>
         <div className="faq">
           <h2>Frequently Asked Questions</h2>
           <p className="fp">
