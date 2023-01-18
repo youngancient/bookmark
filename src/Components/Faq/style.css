@@ -64,6 +64,16 @@
     }
   }
   
+@media screen and (max-width: 361px) {
+    .faq-comp{
+        padding: 1rem;
+    }
+}
+@media screen and (max-width: 280px) {
+    .faq-comp{
+        padding: 0;
+    }
+}
 @media screen and (min-width: 728px) {
     .faq-comp:first-child{
         border-top: 1px solid hsla(229, 8%, 60%, 0.6);
