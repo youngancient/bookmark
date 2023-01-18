@@ -167,13 +167,15 @@ const Main = () => {
         initial= 'initial'
         animate = 'final'
         >
-          <h2>Features</h2>
-          <p className="fp">
-            Our aim is to make it quick and easy for you to access your
-            favourite websites. Your bookmarks sync between your devices so you
-            can access them on
-             the go.
-          </p>
+          <div className="in-features">
+            <h2>Features</h2>
+            <p className="fp">
+              Our aim is to make it quick and easy for you to access your
+              favourite websites. Your bookmarks sync between your devices so you
+              can access them on
+              the go.
+            </p>
+          </div>
           <div className="switch">
             <div className={`tab1 ${switchNo === 0 ? `active` : ''}`} style={{ marginLeft: "0px" }}>
               <button className={switchNo === 0 ? `activebtn` : ''} onClick={() => setSwitch(0)}>

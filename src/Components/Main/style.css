@@ -45,6 +45,13 @@ p{
     flex-direction: column;
     margin-top: 3rem;
 }
+.in-features{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+}
 .fp{
     text-align: center;
     line-height: 1.5rem;
@@ -211,6 +218,12 @@ form svg{
         margin-top: 1rem;
     }
 }
+@media screen and (max-width: 361px) {
+    .hero-text{
+        padding: 0.5rem;
+    }
+}
+
 @media screen and (min-width: 728px) {
     .mobile{
       display: none;
@@ -263,6 +276,9 @@ form svg{
     }
     .features, .downloads{
         margin-top: 3rem;
+    }
+    .in-features{
+        padding: 0;
     }
     .fp{
         width: 60%;
