@@ -15,13 +15,13 @@ const Header = ({ isClicked, setClick }) => {
         </div>
         <div className="desktop-nav desktop">
           <div className="desktop-links">
-            <a href="#" className="" style={{ marginLeft: "0px" }}>
+            <a href="#feature" className="" style={{ marginLeft: "0px" }}>
               FEATURES
             </a>
             <a href="#" className="">
               PRICING
             </a>
-            <a href="#" className="">
+            <a href="#contact" className="">
               CONTACT
             </a>
             <a href="#" className="">

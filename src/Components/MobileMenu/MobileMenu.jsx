@@ -59,7 +59,7 @@ const MobileMenu = ({setClick}) => {
         </div>
         <div className="mobile-links">
             <div className="a">
-            <a href="#" className="">
+            <a href="#feature" className="" onClick={setClick}>
                 FEATURES
             </a>
             </div>
@@ -69,7 +69,7 @@ const MobileMenu = ({setClick}) => {
             </a>
             </div>
             <div className="a">
-            <a href="#" className="">
+            <a href="#contact" className="" onClick={setClick}>
                 CONTACT
             </a>
             </div>

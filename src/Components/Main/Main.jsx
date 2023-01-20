@@ -161,6 +161,7 @@ const Main = () => {
           </motion.div>
         </motion.div>
         <motion.div className="features"
+        id="feature"
         variants={heroVariants}
         initial= 'initial'
         animate = 'final'
@@ -232,7 +233,7 @@ const Main = () => {
           </p>
           <Faq />
         </div>
-        <div className="contact">
+        <div className="contact" id="contact">
           <div className="contact-div">
             <h5>35,000+ already joined</h5>
             <h2>Stay up-to-date with what we’re doing</h2>
