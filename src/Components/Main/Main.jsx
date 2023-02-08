@@ -6,6 +6,7 @@ import Add from "../Add/Add";
 import Faq from "../Faq/Faq";
 import { featuresData, downloadsData } from "../../Utils/Data";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
+import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 
 
@@ -17,7 +18,7 @@ const heroVariants = {
     opacity: 1,
     transition: {
       delay: 1,
-      duration: 1.5,
+      duration: 1,
       staggerChildren: 1,
     }
   }
@@ -32,8 +33,7 @@ const heroChildVariants = {
   final: {
     x: 0,
     transition: {
-      delay: 1,
-      duration: 1.5,
+      duration: 1,
       staggerChildren: 1,
     }
   },
@@ -64,6 +64,7 @@ const heroChildVariants = {
 const Main = () => {
   const [features, setFeatures] = useState(featuresData);
   const [downloads, setDownloads] = useState(downloadsData);
+  const { ref: mainRef, inView: mainInView } = useInView();
   const [switchNo, setSwitch] = useState(0);
   const [feature, setFeature] = useState({});
   useEffect(() => {
@@ -107,7 +108,7 @@ const Main = () => {
 
   return (
     <main>
-      <div className="main">
+      <div className="main" ref={mainRef}>
         <motion.div className="hero"
         variants={heroVariants}
         initial= 'initial'
@@ -116,7 +117,7 @@ const Main = () => {
           <motion.div className="hero-img"
           variants={heroChildVariants}
           initial='left'
-          animate= 'final'
+          animate= {mainInView ?  'final' : ''}
           >
             <img
               src="/assets/illustration-hero.svg"
@@ -127,7 +128,7 @@ const Main = () => {
           <motion.div className="hero-text"
           variants={heroChildVariants}
           initial= 'right'
-          animate='final'
+          animate= {mainInView ?  'final' : ''}
           >
             <div className="text">
               <h1>A Simple Bookmark
