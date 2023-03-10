@@ -8,6 +8,7 @@
     flex-direction: column;
     align-items: center;
     box-shadow: 0px 4px 2px 0.5px hsl(229, 8%, 60%);
+    box-shadow: -1px 1px 4px 1px hsl(229, 8%, 60%);
 }
 .browser h3{
     font-size: 1.2rem;
@@ -25,6 +26,7 @@
 }
 .browser{
     border-radius: 8px;
+    margin-top: 2rem;
 }
 .browser-btn{
     margin-top: 1rem;
@@ -61,6 +63,21 @@
     .dots{
         margin-top: 1rem;
     }
+    .browser{
+        margin-top: 0;
+        margin-left: 2rem;
+        max-height: 320px;
+    }
+    .browser:nth-child(1){
+        margin-left: 0rem;
+    }
+    .browser:nth-child(2){
+        margin-top: 6%;
+        /* height: 320px; */
+    }
+    .browser:nth-child(3){
+        margin-top: 13%;
+    }
   }
   @media screen and (min-width: 998px) {
     .in{
@@ -72,5 +89,12 @@
     }
     .dots{
         margin-top: 2rem;
+    }
+    .browser{
+        margin-left: 3rem;
+        max-height: 380px;
+    }
+    .browser:nth-child(1){
+        margin-left: 0rem;
     }
   }

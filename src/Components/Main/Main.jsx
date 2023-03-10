@@ -112,12 +112,14 @@ const Main = () => {
         <motion.div className="hero"
         variants={heroVariants}
         initial= 'initial'
+        viewport={{ once: true }}
         animate = 'final'
         >
           <motion.div className="hero-img"
           variants={heroChildVariants}
           initial='left'
-          animate= {mainInView ?  'final' : ''}
+
+          whileInView='final'
           >
             <img
               src="/assets/illustration-hero.svg"
@@ -128,7 +130,8 @@ const Main = () => {
           <motion.div className="hero-text"
           variants={heroChildVariants}
           initial= 'right'
-          animate= {mainInView ?  'final' : ''}
+          viewport={{ once: true }}
+          whileInView='final'
           >
             <div className="text">
               <h1>A Simple Bookmark

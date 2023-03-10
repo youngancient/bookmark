@@ -332,11 +332,10 @@ form svg{
         align-items: center;
     }
     .add-comp{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 2rem;
-        padding-left: 2rem;
-        padding-right: 2rem;
+        display: flex;
+        justify-content: space-between;
+        /* padding-left: 2rem;
+        padding-right: 2rem; */
     }
     .browser{
         margin-top: 0rem;
@@ -358,11 +357,17 @@ form svg{
     .form{
         flex-direction: row;
     }
+    .browser{
+        margin-left: 2rem;
+    }
+    .browser:nth-child(1){
+        margin-left: 0rem;
+    }
     .browser:nth-child(2){
-        transform: translateY(15%);
+        height: 380px;
     }
     .browser:nth-child(3){
-        transform: translateY(30%);
+        /* transform: translateY(30%); */
     }
     input{
         width: 50%;
@@ -425,6 +430,12 @@ form svg{
     }
     .add-comp{
         padding: 0;
+    }
+    .browser{
+        margin-left: 3rem;
+    }
+    .browser:nth-child(1){
+        margin-left: 0rem;
     }
     .contact{
         padding: 4rem;

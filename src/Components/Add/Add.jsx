@@ -2,10 +2,29 @@ import "./style.css";
 import { LongButton } from "../Button/Button";
 import { motion } from "framer-motion";
 
+const browserVariants = {
+  initial:{
+    scale : 0,
+    opacity : 0,
+  },
+  final :{
+    scale : 1,
+    opacity : 1,
+    transition :{
+      delay  :0.5,
+      duration : 2.5,
+    }
+  }
+}
 
 const Add = ({alt, imgSrc, head, text}) => {
   return (
-    <div className="browser">
+    <motion.div className="browser"
+    variants={browserVariants}
+    initial = "initial"
+    whileInView= "final"
+    viewport={{ once : true}}
+    >
       <div className="in">
         <img src={imgSrc} alt={alt} className="" />
         <h3>{head}</h3>
@@ -15,7 +34,7 @@ const Add = ({alt, imgSrc, head, text}) => {
       <div className="browser-btn">
         <LongButton />
       </div>
-    </div>
+    </motion.div>
   );
 };
 
