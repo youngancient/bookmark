@@ -18,7 +18,7 @@ const loaderVariant = {
 
 function App() {
   const [isClicked, setClick ] = useState(false);
-  const [isLoading, setLoading] = useState(false);
+  const [isLoading, setLoading] = useState(true);
   useEffect(()=>{
     setTimeout(() => {
       setLoading(false);
