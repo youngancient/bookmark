@@ -1,6 +1,7 @@
 import "./style.css";
 import { LoginButton } from "../Button/Button";
 import MobileMenu from "../MobileMenu/MobileMenu";
+import { AnimatePresence } from "framer-motion";
 
 const Header = ({ isClicked, setClick }) => {
   return (
@@ -44,11 +45,13 @@ const Header = ({ isClicked, setClick }) => {
           </svg>
         </div>
       </div>
+      <AnimatePresence>
       {isClicked ? (
-        <MobileMenu  setClick={setClick} />
+        <MobileMenu  setClick={setClick} key="kagura" />
       ) : (
         <></>
       )}
+      </AnimatePresence>
     </header>
   );
 };

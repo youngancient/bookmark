@@ -111,9 +111,6 @@ p{
 .download{
     margin-top: 2rem;
 }
-.browser{
-    margin-top: 2rem;
-}
 .add-comp>:first-child{
     margin-top: 0;
 }
@@ -334,12 +331,8 @@ form svg{
     .add-comp{
         display: flex;
         justify-content: space-between;
-        /* padding-left: 2rem;
-        padding-right: 2rem; */
     }
-    .browser{
-        margin-top: 0rem;
-    }
+    
     .faq{
         margin-top: 10rem;
         padding: 0;
@@ -356,18 +349,6 @@ form svg{
     }
     .form{
         flex-direction: row;
-    }
-    .browser{
-        margin-left: 2rem;
-    }
-    .browser:nth-child(1){
-        margin-left: 0rem;
-    }
-    .browser:nth-child(2){
-        height: 380px;
-    }
-    .browser:nth-child(3){
-        /* transform: translateY(30%); */
     }
     input{
         width: 50%;
@@ -430,12 +411,6 @@ form svg{
     }
     .add-comp{
         padding: 0;
-    }
-    .browser{
-        margin-left: 3rem;
-    }
-    .browser:nth-child(1){
-        margin-left: 0rem;
     }
     .contact{
         padding: 4rem;
