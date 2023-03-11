@@ -4,15 +4,12 @@ import { motion } from "framer-motion";
 
 const browserVariants = {
   initial:{
-    scale : 0,
-    opacity : 0,
+    scale : 0.8,
   },
   final :{
     scale : 1,
-    opacity : 1,
     transition :{
-      delay  :0.5,
-      duration : 2.5,
+      duration : 1.5,
     }
   }
 }
