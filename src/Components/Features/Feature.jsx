@@ -15,10 +15,12 @@ const featureVariants = {
     x: 0,
     opacity: 1,
     transition: {
-      delay: 0.5,
-      duration: 1,
-      staggerChildren: 1,
+      duration: 0.5,
+      staggerChildren: 0.5,
     },
+  },
+  exit:{
+    opacity: 0,
   },
 };
 
@@ -30,6 +32,7 @@ const Feature = ({ imgSrc, alt, head, text }) => {
         variants={featureVariants}
         initial="right"
         animate="final"
+        exit= "exit"
       >
         <img src={imgSrc} alt={alt} className="" />
       </motion.div>
@@ -38,6 +41,7 @@ const Feature = ({ imgSrc, alt, head, text }) => {
         variants={featureVariants}
         initial="left"
         animate="final"
+        exit= "exit"
       >
         <div className="innertxt">
           <h3 className="">{head}</h3>

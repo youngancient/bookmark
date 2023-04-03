@@ -7,7 +7,7 @@ import Faq from "../Faq/Faq";
 import { featuresData, downloadsData } from "../../Utils/Data";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { useInView } from "react-intersection-observer";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 const heroVariants = {
   initial: {
@@ -183,7 +183,7 @@ const Main = () => {
               you can access them on the go.
             </p>
           </div>
-          <div className="switch">
+          <motion.div className="switch">
             <div
               className={`tab1 ${switchNo === 0 ? `active` : ""}`}
               style={{ marginLeft: "0px" }}
@@ -211,16 +211,18 @@ const Main = () => {
                 Easy Sharing
               </button>
             </div>
-          </div>
+          </motion.div>
           <div className="switch-comp">
             <div className="comps">
-              <Feature
-                key={feature.id}
-                imgSrc={feature.imgSrc}
-                alt={feature.alt}
-                head={feature.head}
-                text={feature.text}
-              />
+              <AnimatePresence mode="wait">
+                <Feature
+                  key={feature.id}
+                  imgSrc={feature.imgSrc}
+                  alt={feature.alt}
+                  head={feature.head}
+                  text={feature.text}
+                />
+              </AnimatePresence>
             </div>
           </div>
         </motion.div>

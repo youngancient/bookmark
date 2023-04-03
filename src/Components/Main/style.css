@@ -89,7 +89,7 @@ p{
     border-bottom: 1px solid hsla(229, 8%, 60%,0.6);
 }
 .switch button:hover{
-    border-bottom: 3px solid hsl(0, 94%, 66%);
+    /* border-bottom: 3px solid hsl(0, 94%, 66%); */
 }
 .switch div .activebtn{
     color: hsl(229, 31%, 21%);
@@ -304,7 +304,7 @@ form svg{
         align-items: center;
     }
     .switch div:hover{
-        border-bottom: 3px solid hsl(0, 94%, 66%);
+        /* border-bottom: 3px solid hsl(0, 94%, 66%); */
     }
     .switch button:hover{
         border-bottom: none;
